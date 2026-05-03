@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
   <key>Label</key>
-  <string>com.example.deepseek-anthropic-proxy</string>
+  <string>com.pixelsama.deepseek-anthropic-proxy</string>
 
   <key>ProgramArguments</key>
   <array>

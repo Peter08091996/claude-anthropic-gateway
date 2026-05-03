@@ -12,7 +12,7 @@ Requires Node.js 18+.
 Run once manually:
 
 ```bash
-cd /Users/pixelsama/deepseek-anthropic-proxy
+cd /path/to/claude-anthropic-gateway
 node src/server.js
 ```
 
@@ -30,7 +30,7 @@ Stop it with `Ctrl+C`.
 Copy the LaunchAgent template:
 
 ```bash
-cp launchd/com.example.deepseek-anthropic-proxy.plist ~/Library/LaunchAgents/com.example.deepseek-anthropic-proxy.plist
+cp launchd/com.pixelsama.deepseek-anthropic-proxy.plist ~/Library/LaunchAgents/com.pixelsama.deepseek-anthropic-proxy.plist
 ```
 
 Replace:
@@ -43,16 +43,16 @@ __PROJECT_DIR__ absolute path to this folder
 Load it:
 
 ```bash
-plutil -lint ~/Library/LaunchAgents/com.example.deepseek-anthropic-proxy.plist
-launchctl bootstrap gui/$(id -u) ~/Library/LaunchAgents/com.example.deepseek-anthropic-proxy.plist
-launchctl enable gui/$(id -u)/com.example.deepseek-anthropic-proxy
-launchctl kickstart -k gui/$(id -u)/com.example.deepseek-anthropic-proxy
+plutil -lint ~/Library/LaunchAgents/com.pixelsama.deepseek-anthropic-proxy.plist
+launchctl bootstrap gui/$(id -u) ~/Library/LaunchAgents/com.pixelsama.deepseek-anthropic-proxy.plist
+launchctl enable gui/$(id -u)/com.pixelsama.deepseek-anthropic-proxy
+launchctl kickstart -k gui/$(id -u)/com.pixelsama.deepseek-anthropic-proxy
 ```
 
 ## 3. Build And Open The Menu Bar App
 
 ```bash
-cd /Users/pixelsama/deepseek-anthropic-proxy
+cd /path/to/claude-anthropic-gateway
 zsh scripts/build-macos-app.sh
 open dist/ClaudeGatewayTray.app
 ```
@@ -64,7 +64,7 @@ This project supports the same signing/notarization variable names used by `Free
 Signed package:
 
 ```bash
-cd /Users/pixelsama/deepseek-anthropic-proxy
+cd /path/to/claude-anthropic-gateway
 brew install create-dmg
 npm run package:macos:signed
 ```
@@ -72,7 +72,7 @@ npm run package:macos:signed
 Offline dry run:
 
 ```bash
-cd /Users/pixelsama/deepseek-anthropic-proxy
+cd /path/to/claude-anthropic-gateway
 SKIP_NOTARIZATION=1 npm run package:macos:signed
 ```
 
